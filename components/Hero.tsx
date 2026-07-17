@@ -2,77 +2,124 @@ export default function Hero() {
   return (
     <section
       style={{
+        position: "relative",
+        overflow: "hidden",
         textAlign: "center",
-        padding: "90px 24px"
+        padding: "90px 24px",
       }}
     >
-      <p
-        style={{
-          color: "#7C9CFF",
-          fontWeight: 600,
-          letterSpacing: 1
-        }}
-      >
-        AI × Blockchain × Privacy
-      </p>
-
-      <h1
-        style={{
-          fontSize: "52px",
-          fontWeight: 800,
-          color: "#fff",
-          marginTop: 18
-        }}
-      >
-        Own Your Digital Identity
-      </h1>
-
-      <p
-        style={{
-          maxWidth: "650px",
-          margin: "24px auto",
-          color: "#B9C1D9",
-          lineHeight: 1.8
-        }}
-      >
-        Take back control of your personal data.
-        Monitor where it goes, choose who can access it,
-        and earn rewards whenever your data is used ethically.
-      </p>
-
+      {/* Glow Background */}
       <div
         style={{
-          display: "flex",
-          gap: "16px",
-          justifyContent: "center",
-          flexWrap: "wrap",
-          marginTop: "40px"
+          position: "absolute",
+          width: 320,
+          height: 320,
+          background: "#4F7CFF",
+          filter: "blur(120px)",
+          opacity: 0.25,
+          top: -60,
+          left: "50%",
+          transform: "translateX(-50%)",
+          borderRadius: "50%",
+          zIndex: 0,
         }}
-      >
-        <button
-          style={{
-            padding: "14px 28px",
-            borderRadius: "12px",
-            border: "none",
-            fontWeight: 700,
-            cursor: "pointer"
-          }}
-        >
-          Get Started
-        </button>
+      />
 
-        <button
+      <div style={{ position: "relative", zIndex: 1 }}>
+        <span
           style={{
-            padding: "14px 28px",
-            borderRadius: "12px",
-            background: "transparent",
-            color: "#fff",
-            border: "1px solid rgba(255,255,255,.25)",
-            cursor: "pointer"
+            display: "inline-block",
+            padding: "8px 18px",
+            border: "1px solid rgba(255,255,255,.15)",
+            borderRadius: 999,
+            color: "#8EA2FF",
+            fontSize: 14,
+            marginBottom: 24,
+            background: "rgba(255,255,255,.03)",
           }}
         >
-          Learn More
-        </button>
+          🚀 Powered by AI + Blockchain
+        </span>
+
+        <h1
+          style={{
+            fontSize: 58,
+            fontWeight: 800,
+            color: "#fff",
+            lineHeight: 1.1,
+            marginBottom: 20,
+          }}
+        >
+          Own Your
+          <br />
+          Digital Identity
+        </h1>
+
+        <p
+          style={{
+            color: "#A6ACC8",
+            maxWidth: 620,
+            margin: "0 auto",
+            fontSize: 18,
+            lineHeight: 1.8,
+          }}
+        >
+          Protect your privacy, control every permission, and earn rewards
+          whenever your data is used ethically.
+        </p>
+
+        <div
+          style={{
+            marginTop: 40,
+            display: "flex",
+            justifyContent: "center",
+            gap: 16,
+            flexWrap: "wrap",
+          }}
+        >
+          <button
+            style={{
+              background: "#fff",
+              color: "#000",
+              padding: "16px 34px",
+              borderRadius: 14,
+              fontWeight: 700,
+              border: "none",
+              cursor: "pointer",
+            }}
+          >
+            Launch App
+          </button>
+
+          <button
+            style={{
+              background: "transparent",
+              color: "#fff",
+              padding: "16px 34px",
+              borderRadius: 14,
+              border: "1px solid #444",
+              cursor: "pointer",
+            }}
+          >
+            Watch Demo
+          </button>
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: 14,
+            marginTop: 34,
+            flexWrap: "wrap",
+            color: "#A6ACC8",
+            fontSize: 14,
+          }}
+        >
+          <span>🔒 GDPR Ready</span>
+          <span>🛡 End-to-End Encryption</span>
+          <span>🌍 Global Privacy</span>
+        </div>
       </div>
     </section>
   );
