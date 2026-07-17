@@ -1,3 +1,5 @@
+import DashboardPreview from "./DashboardPreview";
+
 export default function Hero() {
   return (
     <section
@@ -120,7 +122,9 @@ export default function Hero() {
           <span>🛡 End-to-End Encryption</span>
           <span>🌍 Global Privacy</span>
         </div>
+
+        <DashboardPreview />
       </div>
     </section>
   );
-}
+          }
