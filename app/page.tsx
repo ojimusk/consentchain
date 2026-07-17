@@ -1,52 +1,44 @@
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import FeatureCard from "@/components/FeatureCard";
+
 export default function HomePage() {
   return (
     <main
       style={{
         minHeight: "100vh",
-        background: "#050816",
-        color: "#fff",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        padding: "40px"
+        background:
+          "linear-gradient(180deg,#050816,#0B1227)"
       }}
     >
-      <div
+      <Navbar />
+
+      <Hero />
+
+      <section
         style={{
-          maxWidth: "700px",
-          textAlign: "center"
+          display: "grid",
+          gridTemplateColumns:
+            "repeat(auto-fit,minmax(260px,1fr))",
+          gap: "20px",
+          padding: "40px"
         }}
       >
-        <h1
-          style={{
-            fontSize: "42px",
-            marginBottom: "12px"
-          }}
-        >
-          ConsentChain
-        </h1>
+        <FeatureCard
+          title="🛡 AI Sentinel"
+          description="Monitor data leaks across the web with AI-powered scanning."
+        />
 
-        <p
-          style={{
-            opacity: 0.8,
-            marginBottom: "30px"
-          }}
-        >
-          Your Data, Your Rules, Your Income
-        </p>
+        <FeatureCard
+          title="💰 Monetize Your Data"
+          description="Earn rewards whenever companies request ethical access to your data."
+        />
 
-        <button
-          style={{
-            padding: "14px 28px",
-            borderRadius: "12px",
-            border: "none",
-            cursor: "pointer",
-            fontWeight: "bold"
-          }}
-        >
-          Get Started
-        </button>
-      </div>
+        <FeatureCard
+          title="🔐 Smart Consent"
+          description="Approve, reject, or revoke data permissions with one tap."
+        />
+      </section>
     </main>
   );
 }
