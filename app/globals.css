@@ -1,21 +1,28 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html,
 body {
-  background: #050816;
+  background: #060816;
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(79,124,255,.20), transparent 35%),
+    radial-gradient(circle at 80% 30%, rgba(0,255,255,.08), transparent 30%),
+    radial-gradient(circle at 50% 90%, rgba(132,0,255,.12), transparent 40%);
+  pointer-events: none;
+  z-index: -2;
 }
 
-button {
-  font: inherit;
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: -1;
 }
